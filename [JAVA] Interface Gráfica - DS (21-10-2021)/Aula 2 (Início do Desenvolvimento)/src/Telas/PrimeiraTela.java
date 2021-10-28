@@ -122,6 +122,7 @@ public class PrimeiraTela {
 		lblNome.setFont(new Font("Comic Sans MS", Font.BOLD, 14));
 		
 		textNome = new JTextField();
+		textNome.setBackground(Color.WHITE);
 		textNome.setBounds(10, 46, 221, 25);
 		Panel_Principal.add(textNome);
 		textNome.setToolTipText("");

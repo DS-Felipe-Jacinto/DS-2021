@@ -50,7 +50,7 @@ public class SegundaTela {
 	private JPanel panelFundoAzul_2;
 	private JLabel lblObservacoes;
 	private JPanel panelDados_Comerciais_2;
-	private JTextArea textArea;
+	private JTextArea textObservacoes;
 
 	/**
 	 * Launch the application.
@@ -147,6 +147,7 @@ public class SegundaTela {
 		panelDados_Comerciais.add(textTelefone);
 		
 		JComboBox comboBoxPJ_PF = new JComboBox();
+		comboBoxPJ_PF.setBackground(Color.LIGHT_GRAY);
 		comboBoxPJ_PF.setModel(new DefaultComboBoxModel(new String[] {"(Escolha uma op\u00E7\u00E3o)", "Pessoa F\u00EDsica", "Pessoa Jur\u00EDdica"}));
 		comboBoxPJ_PF.setBounds(123, 120, 165, 25);
 		panelDados_Comerciais.add(comboBoxPJ_PF);
@@ -222,6 +223,7 @@ public class SegundaTela {
 		frame.getContentPane().add(panelDados_Comerciais_1);
 		
 		comboBoxEstado = new JComboBox();
+		comboBoxEstado.setBackground(Color.LIGHT_GRAY);
 		comboBoxEstado.setModel(new DefaultComboBoxModel(new String[] {"--", "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO"}));
 		comboBoxEstado.setForeground(Color.BLACK);
 		comboBoxEstado.setFont(new Font("Franklin Gothic Book", Font.BOLD, 12));
@@ -336,10 +338,10 @@ public class SegundaTela {
 		frame.getContentPane().add(panelDados_Comerciais_2);
 		panelDados_Comerciais_2.setLayout(null);
 		
-		textArea = new JTextArea();
-		textArea.setToolTipText("(Digite aqui uma observa\u00E7\u00E3o)");
-		textArea.setBackground(Color.WHITE);
-		textArea.setBounds(10, 20, 404, 65);
-		panelDados_Comerciais_2.add(textArea);
+		textObservacoes = new JTextArea();
+		textObservacoes.setToolTipText("(Digite aqui uma observa\u00E7\u00E3o)");
+		textObservacoes.setBackground(Color.WHITE);
+		textObservacoes.setBounds(10, 20, 404, 65);
+		panelDados_Comerciais_2.add(textObservacoes);
 	}
 }

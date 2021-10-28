@@ -14,16 +14,19 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.JButton;
+import javax.swing.DropMode;
 
 public class QuartaTela {
 
 	private JFrame frame;
 	private JTextField textCodigo;
 	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
-	private JTextField textField_4;
+	private JTextField textEndereco;
+	private JTextField textBairro;
+	private JTextField textCidade;
+	private JTextField textCEP;
+	private JTextField textTelefone;
 
 	/**
 	 * Launch the application.
@@ -72,21 +75,21 @@ public class QuartaTela {
 		frame.getContentPane().setBackground(new Color(51, 153, 204));
 		frame.getContentPane().setLayout(null);
 		
-		JPanel panelFudoAzul = new JPanel();
-		panelFudoAzul.setBackground(new Color(51, 51, 204));
-		panelFudoAzul.setBounds(33, 28, 515, 43);
-		frame.getContentPane().add(panelFudoAzul);
-		panelFudoAzul.setLayout(null);
+		JPanel panelFundoAzul = new JPanel();
+		panelFundoAzul.setBackground(new Color(51, 51, 204));
+		panelFundoAzul.setBounds(33, 28, 515, 43);
+		frame.getContentPane().add(panelFundoAzul);
+		panelFundoAzul.setLayout(null);
 		
 		JLabel lblNovosClientes = new JLabel("NOVOS CLIENTES");
 		lblNovosClientes.setForeground(Color.WHITE);
 		lblNovosClientes.setFont(new Font("Comic Sans MS", Font.BOLD, 14));
 		lblNovosClientes.setBounds(192, 13, 132, 18);
-		panelFudoAzul.add(lblNovosClientes);
+		panelFundoAzul.add(lblNovosClientes);
 		
 		JPanel panelDadosCadastrais = new JPanel();
 		panelDadosCadastrais.setBackground(new Color(192, 192, 192));
-		panelDadosCadastrais.setBounds(33, 69, 515, 288);
+		panelDadosCadastrais.setBounds(33, 69, 515, 345);
 		frame.getContentPane().add(panelDadosCadastrais);
 		panelDadosCadastrais.setLayout(null);
 		
@@ -97,8 +100,9 @@ public class QuartaTela {
 		panelDadosCadastrais.add(lblCodigo);
 		
 		textCodigo = new JTextField();
+		textCodigo.setText("325");
 		textCodigo.setHorizontalAlignment(SwingConstants.CENTER);
-		textCodigo.setFont(new Font("Lucida Console", Font.BOLD, 12));
+		textCodigo.setFont(new Font("Franklin Gothic Book", Font.BOLD, 12));
 		textCodigo.setEditable(false);
 		textCodigo.setColumns(10);
 		textCodigo.setBounds(122, 11, 64, 25);
@@ -117,63 +121,63 @@ public class QuartaTela {
 		textField.setBounds(259, 11, 198, 25);
 		panelDadosCadastrais.add(textField);
 		
-		JLabel lblEndereo = new JLabel("ENDERE\u00C7O");
-		lblEndereo.setForeground(Color.BLACK);
-		lblEndereo.setFont(new Font("Comic Sans MS", Font.BOLD, 12));
-		lblEndereo.setBounds(63, 62, 68, 18);
-		panelDadosCadastrais.add(lblEndereo);
+		JLabel lblEndereco = new JLabel("ENDERE\u00C7O");
+		lblEndereco.setForeground(Color.BLACK);
+		lblEndereco.setFont(new Font("Comic Sans MS", Font.BOLD, 12));
+		lblEndereco.setBounds(46, 62, 68, 18);
+		panelDadosCadastrais.add(lblEndereco);
 		
-		textField_1 = new JTextField();
-		textField_1.setForeground(Color.BLACK);
-		textField_1.setFont(new Font("Franklin Gothic Book", Font.BOLD, 12));
-		textField_1.setColumns(10);
-		textField_1.setBounds(141, 55, 316, 25);
-		panelDadosCadastrais.add(textField_1);
+		textEndereco = new JTextField();
+		textEndereco.setForeground(Color.BLACK);
+		textEndereco.setFont(new Font("Franklin Gothic Book", Font.BOLD, 12));
+		textEndereco.setColumns(10);
+		textEndereco.setBounds(122, 55, 335, 25);
+		panelDadosCadastrais.add(textEndereco);
 		
-		JLabel lblNome_2 = new JLabel("BAIRRO");
-		lblNome_2.setForeground(Color.BLACK);
-		lblNome_2.setFont(new Font("Comic Sans MS", Font.BOLD, 12));
-		lblNome_2.setBounds(63, 108, 51, 18);
-		panelDadosCadastrais.add(lblNome_2);
+		JLabel lblBairro = new JLabel("BAIRRO");
+		lblBairro.setForeground(Color.BLACK);
+		lblBairro.setFont(new Font("Comic Sans MS", Font.BOLD, 12));
+		lblBairro.setBounds(63, 108, 51, 18);
+		panelDadosCadastrais.add(lblBairro);
 		
-		textField_2 = new JTextField();
-		textField_2.setForeground(Color.BLACK);
-		textField_2.setFont(new Font("Franklin Gothic Book", Font.BOLD, 12));
-		textField_2.setColumns(10);
-		textField_2.setBounds(122, 101, 129, 25);
-		panelDadosCadastrais.add(textField_2);
+		textBairro = new JTextField();
+		textBairro.setForeground(Color.BLACK);
+		textBairro.setFont(new Font("Franklin Gothic Book", Font.BOLD, 12));
+		textBairro.setColumns(10);
+		textBairro.setBounds(122, 101, 129, 25);
+		panelDadosCadastrais.add(textBairro);
 		
-		textField_3 = new JTextField();
-		textField_3.setForeground(Color.BLACK);
-		textField_3.setFont(new Font("Franklin Gothic Book", Font.BOLD, 12));
-		textField_3.setColumns(10);
-		textField_3.setBounds(328, 101, 129, 25);
-		panelDadosCadastrais.add(textField_3);
+		textCidade = new JTextField();
+		textCidade.setForeground(Color.BLACK);
+		textCidade.setFont(new Font("Franklin Gothic Book", Font.BOLD, 12));
+		textCidade.setColumns(10);
+		textCidade.setBounds(328, 101, 129, 25);
+		panelDadosCadastrais.add(textCidade);
 		
-		JLabel lblNome_2_1 = new JLabel("CIDADE");
-		lblNome_2_1.setForeground(Color.BLACK);
-		lblNome_2_1.setFont(new Font("Comic Sans MS", Font.BOLD, 12));
-		lblNome_2_1.setBounds(269, 108, 51, 18);
-		panelDadosCadastrais.add(lblNome_2_1);
+		JLabel lblCidade = new JLabel("CIDADE");
+		lblCidade.setForeground(Color.BLACK);
+		lblCidade.setFont(new Font("Comic Sans MS", Font.BOLD, 12));
+		lblCidade.setBounds(269, 108, 51, 18);
+		panelDadosCadastrais.add(lblCidade);
 		
-		JLabel lblNome_2_2 = new JLabel("CEP");
-		lblNome_2_2.setForeground(Color.BLACK);
-		lblNome_2_2.setFont(new Font("Comic Sans MS", Font.BOLD, 12));
-		lblNome_2_2.setBounds(93, 153, 21, 18);
-		panelDadosCadastrais.add(lblNome_2_2);
+		JLabel lblCEP = new JLabel("CEP");
+		lblCEP.setForeground(Color.BLACK);
+		lblCEP.setFont(new Font("Comic Sans MS", Font.BOLD, 12));
+		lblCEP.setBounds(93, 153, 21, 18);
+		panelDadosCadastrais.add(lblCEP);
 		
-		textField_4 = new JTextField();
-		textField_4.setForeground(Color.BLACK);
-		textField_4.setFont(new Font("Franklin Gothic Book", Font.BOLD, 12));
-		textField_4.setColumns(10);
-		textField_4.setBounds(122, 146, 129, 25);
-		panelDadosCadastrais.add(textField_4);
+		textCEP = new JTextField();
+		textCEP.setForeground(Color.BLACK);
+		textCEP.setFont(new Font("Franklin Gothic Book", Font.BOLD, 12));
+		textCEP.setColumns(10);
+		textCEP.setBounds(122, 146, 129, 25);
+		panelDadosCadastrais.add(textCEP);
 		
-		JLabel lblNome_2_1_1 = new JLabel("ESTADO");
-		lblNome_2_1_1.setForeground(Color.BLACK);
-		lblNome_2_1_1.setFont(new Font("Comic Sans MS", Font.BOLD, 12));
-		lblNome_2_1_1.setBounds(269, 153, 57, 18);
-		panelDadosCadastrais.add(lblNome_2_1_1);
+		JLabel lblEstado = new JLabel("ESTADO");
+		lblEstado.setForeground(Color.BLACK);
+		lblEstado.setFont(new Font("Comic Sans MS", Font.BOLD, 12));
+		lblEstado.setBounds(269, 153, 57, 18);
+		panelDadosCadastrais.add(lblEstado);
 		
 		JComboBox comboBoxEstado = new JComboBox();
 		comboBoxEstado.setModel(new DefaultComboBoxModel(new String[] {"(Escolha uma op\u00E7\u00E3o)", "Acre - AC", "Alagoas - AL", "Amap\u00E1 - AP", "Amazonas - AM", "Bahia - BA", "Cear\u00E1 - CE", "Esp\u00EDrito Santo - ES", "Distrito Federal - DF", "Goi\u00E1s - GO", "Maranh\u00E3o - MA", "Mato Grosso - MT", "Mato Grosso do Sul - MS", "Minas Gerais - MG", "Par\u00E1 - PA", "Para\u00EDba - PB", "Paran\u00E1 - PR", "Pernambuco - PE", "Piau\u00ED - PI", "Rio de Janeiro - RJ", "Rio Grande do Norte - RN", "Rio Grande do Sul - RS", "Rond\u00F4nia - RO", "Roraima - RR", "Santa Catarina - SC", "S\u00E3o Paulo - SP", "Sergipe - SE", "Tocantins - TO"}));
@@ -181,7 +185,84 @@ public class QuartaTela {
 		comboBoxEstado.setFont(new Font("Franklin Gothic Book", Font.BOLD, 12));
 		comboBoxEstado.setBounds(328, 146, 129, 25);
 		panelDadosCadastrais.add(comboBoxEstado);
-		frame.setBounds(100, 100, 600, 427);
+		
+		JLabel lblTelefone = new JLabel("TELEFONE");
+		lblTelefone.setForeground(Color.BLACK);
+		lblTelefone.setFont(new Font("Comic Sans MS", Font.BOLD, 12));
+		lblTelefone.setBounds(46, 200, 68, 18);
+		panelDadosCadastrais.add(lblTelefone);
+		
+		textTelefone = new JTextField();
+		textTelefone.setForeground(Color.BLACK);
+		textTelefone.setFont(new Font("Franklin Gothic Book", Font.BOLD, 12));
+		textTelefone.setColumns(10);
+		textTelefone.setBounds(122, 193, 171, 25);
+		panelDadosCadastrais.add(textTelefone);
+		
+		JLabel lblObservacoes = new JLabel("OBSERVA\u00C7\u00D5ES");
+		lblObservacoes.setForeground(Color.BLACK);
+		lblObservacoes.setFont(new Font("Comic Sans MS", Font.BOLD, 12));
+		lblObservacoes.setBounds(23, 241, 92, 18);
+		panelDadosCadastrais.add(lblObservacoes);
+		
+		JTextArea textOberservacoes = new JTextArea();
+		textOberservacoes.setFont(new Font("Franklin Gothic Book", Font.BOLD, 12));
+		textOberservacoes.setToolTipText("(Digite aqui uma observa\u00E7\u00E3o)");
+		textOberservacoes.setBounds(123, 239, 335, 87);
+		panelDadosCadastrais.add(textOberservacoes);
+		
+		JPanel panelOpcoes = new JPanel();
+		panelOpcoes.setBounds(33, 414, 515, 100);
+		frame.getContentPane().add(panelOpcoes);
+		panelOpcoes.setLayout(null);
+		
+		JButton btnNewButton = new JButton("NOVO");
+		btnNewButton.setFont(new Font("Comic Sans MS", Font.BOLD, 14));
+		btnNewButton.setForeground(Color.WHITE);
+		btnNewButton.setBackground(new Color(51, 51, 204));
+		btnNewButton.setBounds(29, 11, 124, 34);
+		panelOpcoes.add(btnNewButton);
+		
+		JButton btnAlterar = new JButton("ALTERAR");
+		btnAlterar.setForeground(Color.WHITE);
+		btnAlterar.setFont(new Font("Comic Sans MS", Font.BOLD, 14));
+		btnAlterar.setBackground(new Color(51, 51, 204));
+		btnAlterar.setBounds(29, 56, 124, 34);
+		panelOpcoes.add(btnAlterar);
+		
+		JButton btnSalvar = new JButton("SALVAR");
+		btnSalvar.setForeground(Color.WHITE);
+		btnSalvar.setFont(new Font("Comic Sans MS", Font.BOLD, 14));
+		btnSalvar.setBackground(new Color(51, 51, 204));
+		btnSalvar.setBounds(163, 11, 124, 34);
+		panelOpcoes.add(btnSalvar);
+		
+		JButton btnRelatrio = new JButton("RELAT\u00D3RIO");
+		btnRelatrio.setBounds(163, 56, 124, 34);
+		panelOpcoes.add(btnRelatrio);
+		btnRelatrio.setForeground(Color.WHITE);
+		btnRelatrio.setFont(new Font("Comic Sans MS", Font.BOLD, 14));
+		btnRelatrio.setBackground(new Color(51, 51, 204));
+		
+		JButton btnExcluir = new JButton("EXCLUIR");
+		btnExcluir.setBounds(354, 11, 124, 34);
+		panelOpcoes.add(btnExcluir);
+		btnExcluir.setForeground(Color.WHITE);
+		btnExcluir.setFont(new Font("Comic Sans MS", Font.BOLD, 14));
+		btnExcluir.setBackground(Color.RED);
+		
+		JButton btnRetomar = new JButton("RETOMAR");
+		btnRetomar.setBounds(354, 56, 124, 34);
+		panelOpcoes.add(btnRetomar);
+		btnRetomar.setForeground(Color.WHITE);
+		btnRetomar.setFont(new Font("Comic Sans MS", Font.BOLD, 14));
+		btnRetomar.setBackground(Color.RED);
+		
+		JPanel panelEspacamento = new JPanel();
+		panelEspacamento.setBackground(new Color(51, 51, 204));
+		panelEspacamento.setBounds(319, 0, 1, 100);
+		panelOpcoes.add(panelEspacamento);
+		frame.setBounds(100, 100, 600, 585);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 
